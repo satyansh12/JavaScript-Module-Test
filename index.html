@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="outerbox">
+            <div class="close" >
+                <img id="crossimg" src="./cross.png" onclick="cl()" alt="">
+            </div>
+            <div class="box">
+                <h1>Game Rules</h1>
+                <div class="p1">
+                    <div id="bullet"></div>
+                    <p id="pid">Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+                </div>
+                
+                <div class="p2">
+                    <div id="bullet"></div>
+                    <p id="pid">Agree ahead of time whether you&apos;ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+                </div>
+        
+                <div class="p3">
+                    <div id="bullet"></div>
+                    <p id="pid">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+                </div>
+        
+                <div class="p4">
+                    <div id="bullet"></div>
+                    <p id="pid">If both players lay down the same hand, each player lays down another hand</p>
+                </div>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <div class="title">
+                <H1>ROCK</H1>
+                <H1>PAPER</H1>
+                <H1>SCISSOR</H1>
+
+            </div>
+            <div class="scoreouter">
+                <div class="cscore">
+                    <p id="pt_title">COMPUTER</p>
+                    <p id="pt_title">SCORE</p>
+                    <H1 id="points">0</H1>
+                </div>
+                <div class="yscore">
+                    <p id="pt_title">YOUR</p>
+                    <p id="pt_title">SCORE</p>
+                    <H1 id="points">0</H1>
+                </div>
+            </div>
+        </div>
+
+        <div class="hands">
+            <div class="rock">
+                <img src="./rockf.png" alt="" onclick="pickHand('rock')">
+            </div>
+            <div class="scissor">
+                <img src="./scissor.png" alt="" onclick="pickHand('scissor')">
+            </div>
+            <div class="paper">
+                <img src="./paper.png" alt="" onclick="pickHand('paper')">
+            </div>
+        </div>
+
+        <div class="contest">
+            <div class="userhand">
+                <p>YOU PICKED</p>
+                <div class="handimagecontainer">
+                    <img id="userPickimg" src="./paper.png" alt="">
+                </div>
+            </div>
+            <div class="referee">
+                <div class="decision">
+                    <h1>YOU WIN</h1>
+                    <h2 id="against">AGAINST PC</h2>
+                    <div class="newgame" onclick="restartGame()">PLAY AGAIN</div>
+                </div>
+            </div>
+            <div class="PChand">
+                <p>PC PICKED</p>
+                <div class="handimagecontainer">
+                    <img id="pcPickimg" src="./scissor.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <div class="rules" onclick="ru()">RULES</div>
+            <a class="next" href="hurray.html">NEXT</a>
+        </div>
+
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
